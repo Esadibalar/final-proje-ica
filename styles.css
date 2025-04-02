@@ -1,0 +1,1281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4a6741;  
+    --secondary-color: #d4b59d;  
+    --text-color: #333;
+    --light-text: #666;
+    --background: #fff;
+    --section-bg: #f9f9f9;
+    --transition: all 0.3s ease;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+    background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+
+.logo {
+    padding: 0.5rem 0;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo-resim {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.logo a:hover .logo-resim {
+    transform: scale(1.05);
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FDFAF6;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-resim {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-resim:hover {
+    transform: scale(1.05);
+}
+
+.nav-linkler {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-linkler a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+    font-family: var(--heading-font);
+}
+
+.nav-linkler a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.nav-linkler a:hover::after,
+.nav-linkler a.active::after {
+    width: 100%;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(74, 103, 65, 0.8), rgba(212, 181, 157, 0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 0 1rem;
+    color: white;
+}
+
+.hero-icerik {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: var(--heading-font);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-butonlar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-buton {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    font-family: var(--heading-font);
+}
+
+.cta-buton.primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.cta-buton.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-buton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hizmetler-bolum {
+    padding: 5rem 5%;
+    background: var(--section-bg);
+}
+
+.bolum-baslik {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.bolum-baslik h2 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.bolum-baslik p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.hizmetler-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hizmet-kart {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.hizmet-kart:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hizmet-ikon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.hizmet-ikon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.hizmet-kart h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hizmet-kart p {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.fiyatlandirma {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.daha-fazla {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.daha-fazla:hover {
+    color: var(--secondary-color);
+}
+
+.hakkimizda-bolum {
+    padding: 6rem 5%;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hakkimizda-bolum::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(74, 103, 65, 0.03), rgba(212, 181, 157, 0.03));
+    z-index: 0;
+}
+
+.hakkimizda-icerik {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hakkimizda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.hakkimizda-metin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.misyon-beyani {
+    margin-bottom: 3rem;
+}
+
+.misyon-beyani h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.misyon-beyani h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.misyon-beyani p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-text);
+}
+
+.hakkimizda-istatistikler {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.istatistik-ogesi {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.istatistik-ogesi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.istatistik-ogesi i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.istatistik-sayi {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.istatistik-etiket {
+    color: var(--light-text);
+    font-size: 1rem;
+}
+
+.hakkimizda-ozellikler {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.ozellik-kart {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.ozellik-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ozellik-ikon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ozellik-ikon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.ozellik-icerik {
+    flex: 1;
+}
+
+.ozellik-icerik h3 {
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+}
+
+.ozellik-icerik p {
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.hakkimizda-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hakkimizda-bolum .cta-buton {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.hakkimizda-bolum .cta-buton:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bulten-bolum {
+    padding: 5rem 5%;
+    background: var(--section-bg);
+    text-align: center;
+}
+
+.bulten-icerik {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bulten-icerik h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.bulten-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.bulten-form input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.bulten-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.bulten-form button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.bulten-form button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-bolum h3 {
+    font-family: var(--heading-font);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-bolum p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.footer-bolum ul {
+    list-style: none;
+}
+
+.footer-bolum ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bolum a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-bolum a:hover {
+    opacity: 1;
+}
+
+.sosyal-linkler {
+    display: flex;
+    gap: 1rem;
+}
+
+.sosyal-linkler a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.sosyal-linkler a:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.footer-alt {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projeler-bolum {
+    padding: 120px 5% 80px;
+    background: var(--light-background);
+}
+
+.projeler-bolum h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    font-family: var(--heading-font);
+}
+
+.projeler-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.proje-kart {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    position: relative;
+}
+
+.proje-kart:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.proje-resim {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.proje-resim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.proje-kart:hover .proje-resim img {
+    transform: scale(1.05);
+}
+
+.proje-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(74, 103, 65, 0.9), rgba(212, 181, 157, 0.9));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.proje-kart:hover .proje-overlay {
+    opacity: 1;
+}
+
+.proje-linkler {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.proje-link {
+    color: white;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+}
+
+.proje-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.proje-bilgi {
+    padding: 1.5rem;
+}
+
+.proje-bilgi h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    font-family: var(--heading-font);
+}
+
+.proje-bilgi p {
+    color: var(--light-text);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    font-family: var(--body-font);
+}
+
+.proje-teknoloji {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.proje-teknoloji span {
+    background: var(--light-background);
+    color: var(--text-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    font-family: var(--body-font);
+}
+
+.proje-teknoloji span:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.iletisim-bolum {
+    padding: 120px 5% 80px;
+    background: var(--light-background);
+    min-height: 100vh;
+}
+
+.iletisim-baslik {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.iletisim-baslik h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.iletisim-baslik p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.iletisim-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.iletisim-bilgi {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.iletisim-kart {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.iletisim-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.iletisim-ikon {
+    width: 50px;
+    height: 50px;
+    background: var(--light-background);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.iletisim-kart:hover .iletisim-ikon {
+    background: var(--primary-color);
+    color: white;
+}
+
+.iletisim-detaylar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.iletisim-detaylar p {
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.iletisim-detaylar .sosyal-linkler {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.iletisim-detaylar .sosyal-linkler a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.iletisim-detaylar .sosyal-linkler a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.iletisim-form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.form-baslik {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-baslik h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-baslik p {
+    color: var(--light-text);
+}
+
+.form-grup {
+    margin-bottom: 1.5rem;
+}
+
+.form-grup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.input-grup {
+    position: relative;
+}
+
+.input-grup i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-text);
+}
+
+.input-grup input,
+.input-grup textarea {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--light-background);
+}
+
+.input-grup textarea {
+    padding-top: 1rem;
+    resize: vertical;
+}
+
+.input-grup input:focus,
+.input-grup textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: white;
+}
+
+.gonder-buton {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.gonder-buton:hover {
+    background: #5b4cc4;
+    transform: translateY(-2px);
+}
+
+.gonder-buton i {
+    transition: var(--transition);
+}
+
+.gonder-buton:hover i {
+    transform: translateX(5px);
+}
+
+.basarili-mesaj {
+    display: none;
+    text-align: center;
+    padding: 1rem;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.basarili-mesaj i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hakkimizda-hero {
+    display: none;
+}
+
+.yolculuk-bolum {
+    padding: 6rem 0;
+    background: white;
+    position: relative;
+    margin-top: 90px;
+}
+
+.yolculuk-baslik {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.yolculuk-bolum h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.bolum-altbaslik {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.milestone-kartlar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.milestone-kart {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.milestone-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-ikon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.milestone-ikon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.milestone-icerik {
+    flex: 1;
+}
+
+.milestone-yil {
+    display: inline-block;
+    background: rgba(74, 103, 65, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.milestone-icerik h3 {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.milestone-icerik p {
+    color: var(--light-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.basarilar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.basari-kart {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.basari-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.basari-sayi {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.basari-etiket {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.degerler-bolum {
+    padding: 6rem 0;
+    background: var(--section-bg);
+}
+
+.degerler-bolum .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.degerler-bolum h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.degerler-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.deger-kart {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.deger-kart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.deger-ikon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.deger-ikon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.deger-kart h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.deger-kart p {
+    color: var(--light-text);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.ekip-bolum {
+    padding: 6rem 0;
+    background: white;
+}
+
+.ekip-bolum .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.ekip-bolum h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.bolum-aciklama {
+    text-align: center;
+    color: var(--light-text);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.ekip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ekip-uyesi {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.ekip-uyesi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.uyesi-resim {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.uyesi-resim img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ekip-uyesi:hover .uyesi-resim img {
+    transform: scale(1.05);
+}
+
+.uyesi-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(74, 103, 65, 0.9), rgba(212, 181, 157, 0.9));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.ekip-uyesi:hover .uyesi-overlay {
+    opacity: 1;
+}
+
+.uyesi-bilgi {
+    padding: 2rem;
+    text-align: center;
+}
+
+.uyesi-bilgi h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.uyesi-rol {
+    font-family: var(--heading-font);
+    display: block;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.uyesi-bilgi p {
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.uyesi-overlay .sosyal-linkler {
+    display: flex;
+    gap: 1rem;
+}
+
+.uyesi-overlay .sosyal-linkler a {
+    color: white;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.uyesi-overlay .sosyal-linkler a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.cta-bolum {
+    padding: 6rem 0;
+    background: var(--section-bg);
+    text-align: center;
+}
+
+.cta-bolum h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cta-bolum p {
+    color: var(--light-text);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}

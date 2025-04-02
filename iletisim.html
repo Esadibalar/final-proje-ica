@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro | İletişim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="anasayfa.html">
+                <img src="C:\Users\esad\Pictures\quadro-logo.png" alt="Quadro" class="logo-resim">
+            </a>
+        </div>
+        <ul class="nav-linkler">
+            <li><a href="anasayfa.html">Anasayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="projeler.html">Projeler</a></li>
+            <li><a href="iletisim.html" class="active">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="iletisim-bolum">
+        <div class="iletisim-baslik fade-in">
+            <h1>İletişime Geçin</h1>
+            <p>Herhangi bir sorunuz mu var? İletişime geçmek ister misiniz?</p>
+        </div>
+
+        <div class="iletisim-container">
+            <div class="iletisim-bilgi fade-in">
+                <div class="iletisim-kart">
+                    <div class="iletisim-ikon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="iletisim-detaylar">
+                        <h3>Konumumuz</h3>
+                        <p>İstanbul, Türkiye</p>
+                        <p>İş Saatleri: Pazartesi - Cuma 9:00 - 18:00</p>
+                    </div>
+                </div>
+
+                <div class="iletisim-kart">
+                    <div class="iletisim-ikon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="iletisim-detaylar">
+                        <h3>Email Adresimiz</h3>
+                        <p>quadro@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="iletisim-kart">
+                    <div class="iletisim-ikon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="iletisim-detaylar">
+                        <h3>Bizi Ara</h3>
+                        <p>+90 555 555 55 55</p>
+                    </div>
+                </div>
+
+                <div class="iletisim-kart">
+                    <div class="iletisim-ikon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="iletisim-detaylar">
+                        <h3>Sosyal Medya</h3>
+                        <div class="sosyal-linkler">
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="iletisim-form-container fade-in">
+                <form id="contact-form" class="iletisim-form">
+                    <div class="form-baslik">
+                        <h2>Bizimle İletişime Geçin</h2>
+                        <p>Formu doldurun ve en kısa sürede geri dönüş alacaksınız.</p>
+                    </div>
+
+                    <div class="form-grup">
+                        <label for="name">Tam Adınız</label>
+                        <div class="input-grup">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Adınızı Giriniz" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grup">
+                        <label for="email">Mail Adresiniz</label>
+                        <div class="input-grup">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Emailinizi Giriniz" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grup">
+                        <label for="subject">Konu</label>
+                        <div class="input-grup">
+                            <i class="fas fa-tag"></i>
+                            <input type="text" id="subject" name="subject" placeholder="Konuyu Giriniz" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grup">
+                        <label for="message">Mesaj</label>
+                        <div class="input-grup">
+                            <i class="fas fa-comment-alt"></i>
+                            <textarea id="message" name="message" rows="5" placeholder="Mesajınızı Giriniz" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-grup">
+                        <button type="submit" class="gonder-buton">
+                            <span>Mesaj Gönder</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                    <div class="basarili-mesaj">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Mesajınız başarıyla gönderildi!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-bolum">
+                <h3>Quadro</h3>
+                <p>Digital İnovasyonu Güçlendirme</p>
+                <div class="contact-info">
+                    <p>Email: quadro@gmail.com</p>
+                    <p>Tel: +90 555 555 55 55</p>
+                </div>
+            </div>
+            <div class="footer-bolum">
+                <h3>Navigasyon</h3>
+                <ul>
+                    <li><a href="anasayfa.html">Anasayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-bolum">
+                <h3>Takip Edin</h3>
+                <div class="sosyal-linkler">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-alt">
+            <p>&copy; 2025 Quadro. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+</html> 
